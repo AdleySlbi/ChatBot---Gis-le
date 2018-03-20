@@ -1,5 +1,5 @@
 # coding: utf-8
-
+#sudo pip install naiveBayesClassifier
 """
 Suppose you have some texts of news and know their categories.
 You want to train a system with this pre-categorized/pre-classified

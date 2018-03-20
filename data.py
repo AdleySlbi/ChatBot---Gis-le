@@ -20,4 +20,11 @@ newsSet = [
     {'text': 'Dimanche dernier', 'category': 'classico'},
     {'text': 'Evra', 'category': 'classico'},
     {'text': 'Panini panini paninie paninis', 'category': 'panini'},
+    {'text': 'Panini panini paninie paninis', 'category': 'panini'},
+    {'text': 'Panini panini paninie paninis', 'category': 'panini'},
+    {'text': 'Panini panini paninie paninis', 'category': 'panini'},
+    {'text': 'Panini panini paninie paninis', 'category': 'panini'},
+    {'text': 'Panini panini paninie paninis', 'category': 'panini'},
+    {'text': 'Panini panini paninie paninis', 'category': 'panini'},
+
 ]

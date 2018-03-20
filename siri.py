@@ -36,7 +36,11 @@ def ma_loop(value):
     return pascompris(value)
 
 def question(value=None):
-    value = raw_input("A propos ?")
+    value = raw_input("A propos de moi?")
+    if "oui" in value:
+        value = raw_input("Je m'appel machin je suis là pour t'aider à choisir des plats à cuisiner")
+    else: 
+        value = raw_input("Qu'avez vous dans votre frigo?'")
     return ma_loop(value)
 
 def classico(value=None):
@@ -67,7 +71,7 @@ def hello(value=None):
     return ma_loop(value)
 
 def pascompris(value=None):
-    value = raw_input("Je n'ai pas compris, pouvez vous réessayer?")
+    value = raw_input("Je n'ai pas compris, pouvez vous réessayer? Pour recommencer entrez On mange quoi ce soir")
     return ma_loop(value)
 
 def tiao(value=None):
@@ -80,7 +84,7 @@ def tomate(value=None):
 
 def panini(value=None):
     value = raw_input("Voilà la recette de la du Panini!")
-
-
+    value = raw_input("Puis-je faire autre chose maintenant?")
+    return ma_loop(value)
 
 hello()
