@@ -8,9 +8,9 @@ texts. So, you have better call this data your training set.
 
 # You need to train the system passing each text one by one to the trainer module.
 newsSet = [
-    {'text': 'Oui bonjour je vous écoute', 'category': 'hello'},
-    {'text': 'Salut la team', 'category': 'hello'},
-    {'text': 'Hello', 'category': 'hello'},
+    {'text': 'Bonjour', 'category': 'hello'},
+    {'text': 'On mange quoi ce soir', 'category': 'hello'},
+    {'text': 'Tomate Jambon Pain Beurre', 'category': 'tomate'},
     {'text': 'J‘ai besoin de savoir une informaton ou une question', 'category': 'question'},
     {'text': 'J‘ai une question', 'category': 'question'},
     {'text': 'Aurevoir', 'category': 'tiao'},
@@ -19,4 +19,5 @@ newsSet = [
     {'text': 'PSG / Marseille', 'category': 'classico'},
     {'text': 'Dimanche dernier', 'category': 'classico'},
     {'text': 'Evra', 'category': 'classico'},
+    {'text': 'Panini panini paninie paninis', 'category': 'panini'},
 ]

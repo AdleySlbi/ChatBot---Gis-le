@@ -12,7 +12,9 @@ excec = {
     'hello': 1,
     'tiao': 0,
     'question': 0,
-    'classico': 0
+    'tomate': 0,
+    'classico': 0,
+    'panini': 0
 }
 
 def ma_loop(value):
@@ -29,9 +31,11 @@ def ma_loop(value):
         if category == 'question': return question()
         if category == 'tiao': return tiao()
         if category == 'classico': return classico(value)
+        if category == 'tomate': return tomate()
+        if category == 'panini': return panini()
     return pascompris(value)
 
-def question():
+def question(value=None):
     value = raw_input("A propos ?")
     return ma_loop(value)
 
@@ -47,9 +51,9 @@ def classico(value=None):
         return ma_loop(value)
 
 
-def hello():
+def hello(value=None):
     if excec['hello'] is 1:
-        value = raw_input("Bonjour, Quelle est votre question ?")
+        value = raw_input("Bonjour Adley! Alors on ne sait pas quoi manger? Qu'avez vous dans votre frigo?")
     elif excec['hello'] is 2:
         value = raw_input("Oui, bonjour, quelle est votre question, je peux vous aider ?")
     elif excec['hello'] is 3:
@@ -62,11 +66,21 @@ def hello():
 
     return ma_loop(value)
 
-def pascompris():
-    value = raw_input("Je n'ai pas compris, que voulez vous dire ?")
+def pascompris(value=None):
+    value = raw_input("Je n'ai pas compris, pouvez vous réessayer?")
     return ma_loop(value)
 
-def tiao():
+def tiao(value=None):
     print "Aurevoir et merci de votre visite!"
+
+
+def tomate(value=None):
+    value = raw_input("Super, je vous propose : un panini, une tomate mozarella")
+    return ma_loop(value)
+
+def panini(value=None):
+    value = raw_input("Voilà la recette de la du Panini!")
+
+
 
 hello()
