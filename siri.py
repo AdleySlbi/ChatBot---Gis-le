@@ -14,7 +14,8 @@ excec = {
     'question': 0,
     'tomate': 0,
     'classico': 0,
-    'panini': 0
+    'panini': 0,
+    'pizza': 0,
 }
 
 def ma_loop(value):
@@ -33,6 +34,7 @@ def ma_loop(value):
         if category == 'classico': return classico(value)
         if category == 'tomate': return tomate()
         if category == 'panini': return panini()
+        if category == 'pizza': return pizza()
     return pascompris(value)
 
 def question(value=None):
@@ -79,12 +81,21 @@ def tiao(value=None):
 
 
 def tomate(value=None):
-    value = raw_input("Super, je vous propose : un panini, une tomate mozarella")
+    value = raw_input("Super, je vous propose : un panini, une pizza")
     return ma_loop(value)
 
 def panini(value=None):
     value = raw_input("Voilà la recette de la du Panini!")
     value = raw_input("Puis-je faire autre chose maintenant?")
+    return ma_loop(value)
+
+def pizza(value=None):
+    value = raw_input("Voilà la recette de la pizza")
+    value = raw_input("Puis-je faire autre chose maintenant?")
+    if "oui" in value:
+        value = raw_input("Recommencer")
+    else: 
+        value = raw_input("ByeBye")
     return ma_loop(value)
 
 hello()
