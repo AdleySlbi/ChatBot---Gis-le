@@ -79,21 +79,27 @@ def pascompris(value=None):
 def tiao(value=None):
     print "Aurevoir et merci de votre visite!"
 
-
+#Ingrédients clé
 def tomate(value=None):
     value = raw_input("Super, je vous propose : un panini, une pizza")
     return ma_loop(value)
 
+
+#Recettes
 def panini(value=None):
     value = raw_input("Voilà la recette de la du Panini!")
     value = raw_input("Puis-je faire autre chose maintenant?")
+    if "oui" in value:
+        value = raw_input("Pour chercher une nouvelle recette tapez On mange quoi ce soir")
+    else: 
+        value = raw_input("ByeBye")
     return ma_loop(value)
 
 def pizza(value=None):
     value = raw_input("Voilà la recette de la pizza")
-    value = raw_input("Puis-je faire autre chose maintenant?")
+    value = raw_input("Puis-je faire autre chose maintenant? Oui / Non")
     if "oui" in value:
-        value = raw_input("Recommencer")
+        value = raw_input("Pour chercher une nouvelle recette tapez On mange quoi ce soir")
     else: 
         value = raw_input("ByeBye")
     return ma_loop(value)

@@ -11,9 +11,10 @@ newsSet = [
     {'text': 'Bonjour', 'category': 'hello'},
     {'text': 'On mange quoi ce soir', 'category': 'hello'},
     {'text': 'Tomate Jambon Pain Beurre', 'category': 'tomate'},
+    {'text': 'pates pate creme lardon oeuf oeufs oignons oignon ognons', 'category': 'pate'},
+    #Recettes
     {'text': 'pizza', 'category': 'pizza'},
-    {'text': 'Panini panini paninie paninis', 'category': 'panini'},
-    {'text': 'Panini panini paninie paninis', 'category': 'panini'},
+    {'text': 'Carbonara', 'category': 'Pate à la carbonara'},
     #Question de base
     {'text': 'J‘ai besoin de savoir une informaton ou une question', 'category': 'question'},
     {'text': 'J‘ai une question', 'category': 'question'},
