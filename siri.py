@@ -10,7 +10,7 @@ from data import newsSet
 
 excec = {
     'hello': 1,
-    'tiao': 0,
+    'fin': 0,
     'question': 0,
     'sandwich': 0,
     'pate': 0,
@@ -37,7 +37,7 @@ def ma_loop(value):
         excec[category] += 1
         if category == 'hello': return hello()
         if category == 'question': return question()
-        if category == 'tiao': return tiao()
+        if category == 'fin': return fin()
         if category == 'classico': return classico(value)
         if category == 'sandwich': return sandwich()
         if category == 'panini': return panini()
@@ -74,9 +74,9 @@ def classico(value=None):
 
 def hello(value=None):
     if excec['hello'] is 1:
-        value = raw_input("Bonjour! Je suis Gisèle, votre conseillère pour la préparation de votre dîner. Qu'avez vous dans votre frigo?")
+        value = raw_input("Bonjour! Je suis Gisèle, votre conseillère pour la préparation de votre dîner. Pour m'activer, taper On mange quoi ce soir")
     elif excec['hello'] is 2:
-        value = raw_input("Oui, bonjour, quelle est votre question, je peux vous aider ?")
+        value = raw_input("Tout d'abord qu'avez vous dans votre frigo?")
     elif excec['hello'] is 3:
         value = raw_input("Oui, je vous écoute nous sommes à votre service ?")
     elif excec['hello'] is 4:
@@ -88,19 +88,47 @@ def hello(value=None):
     return ma_loop(value)
 
 def pascompris(value=None):
-    value = raw_input("Je n'ai pas compris, pouvez vous réessayer? Pour recommencer entrez On mange quoi ce soir")
+    value = raw_input("Je n'ai pas compris, pouvez vous réessayer? Pour recommencer entrez - On mange quoi ce soir -")
     return ma_loop(value)
 
-def tiao(value=None):
-    print "Aurevoir et merci de votre visite!"
+def fin(value=None):
+    value = raw_input("Puis-je faire autre chose maintenant? Oui / Non")
+    if "oui" in value:
+        value = raw_input("Pour chercher une nouvelle recette tapez - On mange quoi ce soir -")
+    elif "non" in value: 
+        value = raw_input("Bon appetit! 🍽 ")     
+    return ma_loop(value)
+
+def time(value=None):
+    return raw_input("De combien de temps disposez-vous pour cuisiner : 10' / 20' / 30' ")
+
+def four(value=None):
+    return raw_input("Avez vous un four? Oui / Non")
 
 #Ingrédients clé
 def sandwich(value=None):
-    value = raw_input("Super, je vous propose : un panini / une pizza")
+    timer = time()
+    if "10" in timer:
+        materiel = four()
+        if 'oui' in materiel:
+            value = raw_input("Je vous propose les recettes suivantes : panini / pizza ")
+            if 'pizza' in value:
+                exec pizza()
+            elif 'panini' in value: 
+                exec panini()
+        elif 'non' in materiel:
+            value = raw_input("Je vous propose les recettes suivantes : tomate mozzarella / salade cesar  ")
+            if 'tomate mozzarella' in value:
+                exec tomatemozza()
+            elif 'salade cesar' in value:
+                saladecesar()
+    elif '20' in timer:
+        exec pizza()
     return ma_loop(value)
 
 def pate(value=None):
-    value = raw_input("Super, je vous propose : pate carbonara / pate bolognaise / pate jambon / pate toscane")
+    if "10" in value:
+        value = raw_input("Super, je vous propose : pate carbonara / pate bolognaise / pate jambon / pate toscane")
     return ma_loop(value)
 
 def mexicain(value=None):
@@ -112,76 +140,46 @@ def mexicain(value=None):
 #Sandwich-------
 def panini(value=None):
     value = raw_input("Voilà la recette du Panini : http://bit.ly/paniniPy")
-    value = raw_input("Puis-je faire autre chose maintenant?")
-    if "oui" in value:
-        value = raw_input("Pour chercher une nouvelle recette tapez On mange quoi ce soir")
-    else: 
-        value = raw_input("Bon appetit! 🍽 ")
-    return ma_loop(value)
+    exec fin()
 
 def pizza(value=None):
     value = raw_input("Voilà la recette de la pizza : http://bit.ly/pizzaPy")
-    value = raw_input("Puis-je faire autre chose maintenant? Oui / Non")
-    if "oui" in value:
-        value = raw_input("Pour chercher une nouvelle recette tapez On mange quoi ce soir")
-    else: 
-        value = raw_input("Bon appetit! 🍽")
-    return ma_loop(value)
+    exec fin()
+
+def tomatemozza():
+    value = raw_input("Voilà la recette de la Tomate Mozzarella : http://bit.ly/tomateMozzaPy")
+    exec fin()
+
+def saladecesar():
+    value = raw_input("Voilà la recette de la Salade César : http://bit.ly/saladeCesarPy")
+    exec fin()
 
 #Pate-------
 def carbonara(value=None):
     value = raw_input("Voilà la recette des pâtes à la carbonara : http://bit.ly/carbonaraPy ")
-    value = raw_input("Puis-je faire autre chose maintenant? Oui / Non")
-    if "oui" in value:
-        value = raw_input("Pour chercher une nouvelle recette tapez On mange quoi ce soir")
-    else: 
-        value = raw_input("Bon appetit! 🍽")
-    return ma_loop(value)
+    exec fin() 
 
 def bolognaise(value=None):
     value = raw_input("Voilà la recette des pâtes à la bolognaise : http://bit.ly/bolognaisePy")
-    value = raw_input("Puis-je faire autre chose maintenant? Oui / Non")
-    if "oui" in value:
-        value = raw_input("Pour chercher une nouvelle recette tapez On mange quoi ce soir")
-    else: 
-        value = raw_input("Bon appetit! 🍽")
-    return ma_loop(value)
+    exec fin()
 
 def jambon(value=None):
     value = raw_input("Voilà la recette des pâtes au jambon : http://bit.ly/jambonPy")
-    value = raw_input("Puis-je faire autre chose maintenant? Oui / Non")
-    if "oui" in value:
-        value = raw_input("Pour chercher une nouvelle recette tapez On mange quoi ce soir")
-    else: 
-        value = raw_input("Bon appetit! 🍽")
-    return ma_loop(value)
+    exec fin()
 
 def toscane(value=None):
     value = raw_input("Voilà la recette des pâtes à la façon toscane : http://bit.ly/toscanePy")
-    value = raw_input("Puis-je faire autre chose maintenant? Oui / Non")
-    if "oui" in value:
-        value = raw_input("Pour chercher une nouvelle recette tapez On mange quoi ce soir")
-    else: 
-        value = raw_input("Bon appetit! 🍽")
-    return ma_loop(value)
+    exec fin()
 
 #Mexicain-------
 def tacosboeuf(value=None):
     value = raw_input("Voilà la recette des tacos au boeuf : http://bit.ly/tacosBoeufPy ")
-    value = raw_input("Puis-je faire autre chose maintenant? Oui / Non")
-    if "oui" in value:
-        value = raw_input("Pour chercher une nouvelle recette tapez On mange quoi ce soir")
-    else: 
-        value = raw_input("Bon appetit! 🍽")
-    return ma_loop(value)
+    exec fin()
 
 def tacospoulet(value=None):
     value = raw_input("Voilà la recette des tacos au poulet : http://bit.ly/tacosPouletPy")
-    value = raw_input("Puis-je faire autre chose maintenant? Oui / Non")
-    if "oui" in value:
-        value = raw_input("Pour chercher une nouvelle recette tapez On mange quoi ce soir")
-    else: 
-        value = raw_input("Bon appetit! 🍽")
-    return ma_loop(value)
+    exec fin()
+
+
 
 hello()
