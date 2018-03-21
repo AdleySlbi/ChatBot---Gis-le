@@ -10,11 +10,22 @@ texts. So, you have better call this data your training set.
 newsSet = [
     {'text': 'Bonjour', 'category': 'hello'},
     {'text': 'On mange quoi ce soir', 'category': 'hello'},
-    {'text': 'Tomate Jambon Pain Beurre', 'category': 'tomate'},
-    {'text': 'pates pate creme lardon oeuf oeufs oignons oignon ognons', 'category': 'pate'},
+    #Ingrédients
+    {'text': 'Tomate Jambon Pain Beurre Creme champignon Champignon salade fromage mozzarella', 'category': 'sandwich'},
+    {'text': 'pates pate creme lardon oeuf oeufs oignons oignon ognons jambon lardon', 'category': 'pate'},
+    {'text': 'poivrons poulet tomate oignons poulet boeuf maïs oignon fromage', 'category': 'mexicain'},
     #Recettes
-    {'text': 'pizza', 'category': 'pizza'},
-    {'text': 'Carbonara', 'category': 'Pate à la carbonara'},
+    #Sandwich
+    {'text': 'panini Panini PANINI', 'category': 'panini'},
+    {'text': 'pizza Pizza PIZZA', 'category': 'pizza'},
+    #Pate
+    {'text': 'Carbonara Carbo carbonara', 'category': 'carbonara'},
+    {'text': 'Bolognaise bolognaise bolo Bolo', 'category': 'bolognaise'},
+    {'text': 'Jambon jambon', 'category': 'jambon'},
+    {'text': 'Toscane toscane', 'category': 'toscane'},
+    #Mexicain
+    {'text': 'tacos poulet', 'category': 'tacospoulet'},
+    {'text': 'tacos boeuf', 'category': 'tacosboeuf'},
     #Question de base
     {'text': 'J‘ai besoin de savoir une informaton ou une question', 'category': 'question'},
     {'text': 'J‘ai une question', 'category': 'question'},
