@@ -11,23 +11,13 @@ newsSet = [
     {'text': 'Bonjour', 'category': 'hello'},
     {'text': 'On mange quoi ce soir', 'category': 'hello'},
     #Ingrédients
-    {'text': 'Tomate Jambon Pain Beurre Creme champignon Champignon salade fromage mozzarella', 'category': 'sandwich'},
-    {'text': 'pates pate creme lardon oeuf oeufs oignons oignon ognons jambon lardon', 'category': 'pate'},
-    {'text': 'poivrons poulet tomate oignons poulet boeuf maïs oignon fromage', 'category': 'mexicain'},
-    #Recettes
-    #Sandwich
-    {'text': 'panini Panini PANINI', 'category': 'panini'},
-    {'text': 'pizza Pizza PIZZA', 'category': 'pizza'},
-    #Pate
-    {'text': 'Carbonara Carbo carbonara', 'category': 'carbonara'},
-    {'text': 'Bolognaise bolognaise bolo Bolo', 'category': 'bolognaise'},
-    {'text': 'Jambon jambon', 'category': 'jambon'},
-    {'text': 'Toscane toscane', 'category': 'toscane'},
-    #Mexicain
-    {'text': 'tacos poulet', 'category': 'tacospoulet'},
-    {'text': 'tacos boeuf', 'category': 'tacosboeuf'},
+    {'text': 'poulet salade laitue fromage riz mozzarela mozzarella mozarella tomate basilique', 'category': 'salade'},
+    {'text': 'curry poivrons poivron fromages tomate fromage crème fraiche poulet basilique pates pate lardon oignons oignon ognon beurre tomate oeuf', 'category': 'pate'},
+    {'text': 'lait oeuf oeufs pate feuilletee creme fraiche creme lardons fromage oignons ognons jambon thon tomate sauce', 'category': 'tarte'},
+
+
     #Question de base
-    {'text': 'J‘ai besoin de savoir une informaton ou une question', 'category': 'question'},
+    {'text': 'Information information questions question', 'category': 'question'},
     {'text': 'J‘ai une question', 'category': 'question'},
     {'text': 'Aurevoir', 'category': 'tiao'},
     {'text': 'Merci, bonne journée !', 'category': 'tiao'},
