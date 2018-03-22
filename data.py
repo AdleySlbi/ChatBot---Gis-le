@@ -10,8 +10,14 @@ texts. So, you have better call this data your training set.
 newsSet = [
     {'text': 'Bonjour', 'category': 'hello'},
     {'text': 'On mange quoi ce soir', 'category': 'hello'},
-    {'text': 'Tomate Jambon Pain Beurre', 'category': 'tomate'},
-    {'text': 'J‘ai besoin de savoir une informaton ou une question', 'category': 'question'},
+    #Ingrédients
+    {'text': 'poulet salade laitue fromage riz mozzarela mozzarella mozarella tomate basilique', 'category': 'salade'},
+    {'text': 'curry poivrons poivron fromages tomate fromage crème fraiche poulet basilique pates pate lardon oignons oignon ognon beurre tomate oeuf', 'category': 'pate'},
+    {'text': 'lait oeuf oeufs pate feuilletee creme fraiche creme lardons fromage oignons ognons jambon thon tomate sauce', 'category': 'tarte'},
+
+
+    #Question de base
+    {'text': 'Information information questions question', 'category': 'question'},
     {'text': 'J‘ai une question', 'category': 'question'},
     {'text': 'Aurevoir', 'category': 'tiao'},
     {'text': 'Merci, bonne journée !', 'category': 'tiao'},
@@ -19,5 +25,4 @@ newsSet = [
     {'text': 'PSG / Marseille', 'category': 'classico'},
     {'text': 'Dimanche dernier', 'category': 'classico'},
     {'text': 'Evra', 'category': 'classico'},
-    {'text': 'Panini panini paninie paninis', 'category': 'panini'},
 ]
